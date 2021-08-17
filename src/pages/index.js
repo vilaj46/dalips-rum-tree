@@ -1,7 +1,19 @@
 import * as React from "react"
+import styled from "styled-components"
 
-import rum from "../images/rum.jpg";
-import shirt from "../images/shirt.jpg";
+import avocado from "../images/avocado.jpg";
+
+const Image = styled.img`
+  width: 25%;
+  height: 25%;
+  margin: 0 auto;
+`
+
+const Div = styled.div`
+  position: relative;
+  display: flex;
+  justify-content: center;
+`
 
 // styles
 const pageStyles = {
@@ -16,6 +28,9 @@ const headingStyles = {
 }
 const headingAccentStyles = {
   color: "#663399",
+  position: "absolute",
+  top: "0",
+  left: "0"
 }
 
 // markup
@@ -25,17 +40,15 @@ const IndexPage = () => {
       <title>Home Page</title>
       <h1 style={headingStyles}>
         Dalips Rum Tree
-        <br />
-        <span style={headingAccentStyles}>— Current under construction</span>
-        <span role="img" aria-label="Party popper emojis">
-          🎉🎉
-        </span>
-        <br />
-        <div style={{display: "flex"}}>
-        <img src={shirt} alt="T-Shirt" />
-        <img src={rum} alt="Rum!" />
-        </div>
       </h1>
+
+      <Div>
+        <h2 style={headingAccentStyles}>— Current under construction</h2>
+        <Image src={avocado} alt="Avocado" />
+      </Div>
+        
+        
+        <h3>WE SELL T-SHIRTS, CUSTOM MUGS, CUSTOM MOUSE PADS</h3>
     </main>
   )
 }
